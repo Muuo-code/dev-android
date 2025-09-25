@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0A0A23">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="28dp"
+        android:layout_marginTop="60dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/swiftride"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="#9B5CFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_to_continue_your_ride"
+            android:textColor="#B0B0C3"
+            android:textSize="15sp"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="@string/email"
+            android:padding="14dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/themed_input_bg"
+            android:textColor="@android:color/white"
+            android:textColorHint="#8080A0"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="@string/password"
+            android:padding="14dp"
+            android:inputType="textPassword"
+            android:background="@drawable/themed_input_bg"
+            android:textColor="@android:color/white"
+            android:textColorHint="#8080A0"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textSize="14sp"
+            android:textColor="#7B2CBF"
+            android:layout_gravity="end"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:cornerRadius="28dp"
+            app:backgroundTint="#7B2CBF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Register Link -->
+        <TextView
+            android:id="@+id/tvRegisterLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account_register"
+            android:textColor="#9B5CFF"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

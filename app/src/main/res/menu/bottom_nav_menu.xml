@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_bookings"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/nav_cars"
+        android:icon="@drawable/ic_cars"
+        android:title="@string/cars" />
+
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_reservations"
+        android:title="@string/reservations" />
+
+</menu>

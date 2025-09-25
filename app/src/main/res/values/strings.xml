@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">swiftride</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cars">Cars</string>
+    <string name="bookings">Bookings</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="pick_up_date">Pick-up Date</string>
+    <string name="return_date">Return Date</string>
+    <string name="select_vehicle">Select Vehicle</string>
+    <string name="show_vehicles">Show Vehicles</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="car_image">Car Image</string>
+    <string name="car_name">Car Name</string>
+    <string name="_5_seats">5 seats</string>
+    <string name="automatic">Automatic</string>
+    <string name="select">Select</string>
+    <string name="reservations">reservations</string>
+    <string name="return_icon">Return icon</string>
+    <string name="pickup_icon">Pickup icon</string>
+    <string name="swiftride">SwiftRide</string>
+    <string name="welcome_to_swiftride">Welcome to SwiftRide</string>
+    <string name="your_goto_solution_for_a_perfect_ride">Your GoTo solution for a perfect ride</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="create_an_account_to_continue">Create an account to continue</string>
+    <string name="sign_in_to_continue_your_ride">Sign in to continue your ride</string>
+    <string name="don_t_have_an_account_register">Don’t have an account? Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="get_started">Get Started</string>
+    <string name="no_hidden_fees_simple_clear_rentals">No hidden fees – simple, clear rentals</string>
+    <string name="affordable_transparent_pricing">Affordable transparent pricing</string>
+    <string name="pick_up_your_ride_as_soon_as_you_land">Pick up your ride as soon as you land.</string>
+    <string name="airport_pickup_made_easy">Airport pickup made easy</string>
+    <string name="from_city_rides_to_weekend_getaways_swiftride_has_you_covered">From city rides to weekend getaways, SwiftRide has you covered.</string>
+    <string name="rent_cars_for_any_occasion">Rent cars for any occasion</string>
+    <string name="our_vehicles">Our Vehicles</string>
+    <string name="find_your_ride_in_seconds">Find your ride in seconds</string>
+    <string name="hello_ready_for_your_next_ride">Hello, Ready for your next Ride?</string>
+    <string name="why_swiftride">Why SwiftRide?</string>
+    <string name="fast_reliable_bookings"><![CDATA[• Fast & reliable bookings]]></string>
+    <string name="wide_range_of_vehicles">• Wide range of vehicles</string>
+    <string name="trusted_by_thousands">• Trusted by thousands</string>
+    <string name="_10k_rides">10K+ Rides</string>
+    <string name="_4_8_rating">4.8★ Rating</string>
+    <string name="_5_years">5+ Years</string>
+    <string name="ride_smart_ride_swift">Ride Smart, Ride Swift</string>
+    <string name="book_with_us">Book with Us</string>
+    <string name="log_out">Log Out</string>
+    <string name="no_bookings_yet">No bookings yet</string>
+    <string name="browse_vehicles_to_make_a_new_booking">Browse vehicles to make a new booking</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="pay">Pay</string>
+    <string name="cancel">Cancel</string>
+    <string name="track">Track</string>
+    <string name="city_city">City - City</string>
+    <string name="start_end_date">Start - End Date</string>
+    <string name="browse_vehicles">browse_vehicles</string>
+    <string name="bookings_list">bookings_list</string>
+    <string name="return_location">return_location</string>
+    <string name="pick_up_location">pick_up_location</string>
+
+    <string-array name="cities_array">
+        <item>Nairobi</item>
+        <item>Mombasa</item>
+        <item>Kisumu</item>
+        <item>Nakuru</item>
+        <item>Eldoret</item>
+    </string-array>
+</resources>

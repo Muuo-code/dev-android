@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="appName" type="id" />
+    <item name="welcomeText" type="id" />
+    <item name="subtitle" type="id" />
+    <item name="btnGetStarted" type="id" />
+    <item name="loginText" type="id" />
+    <item name="registerText" type="id" />
+    <item name="tvLoginLink" type="id" />
+    <item name="btnRegister" type="id" />
+    <item name="etConfirmPassword" type="id" />
+    <item name="etPassword" type="id" />
+    <item name="etEmail" type="id" />
+    <item name="etFullName" type="id" />
+    <item name="tvSubtitle" type="id" />
+    <item name="tvAppName" type="id" />
+    <item name="tvRegisterLink" type="id" />
+    <item name="btnLogin" type="id" />
+    <item name="tvForgotPassword" type="id" />
+</resources>
