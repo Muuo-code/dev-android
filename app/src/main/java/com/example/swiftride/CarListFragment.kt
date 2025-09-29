@@ -30,11 +30,16 @@ class CarListFragment : Fragment() {
 
         // Car list with local drawables
         val carList = listOf(
-            Car("Toyota Corolla", 50, 5, "Automatic", R.drawable.axela),
-            Car("Nissan X-Trail", 80, 7, "Manual", R.drawable.bmw_x5),
+            Car("Axela", 50, 5, "Automatic", R.drawable.axela),
+            Car("BMW X1", 80, 7, "Manual", R.drawable.bmw_x5),
             Car("Honda Civic", 60, 5, "Automatic", R.drawable.civic),
-            Car("BMW X5", 150, 7, "Automatic", R.drawable.trailblazer),
-            Car("Tesla Model S", 200, 5, "Automatic", R.drawable.gle)
+            Car("Chevrolet", 150, 7, "Automatic", R.drawable.trailblazer),
+            Car("Benz GLE", 200, 5, "Automatic", R.drawable.gle),
+            Car("Axela", 50, 5, "Automatic", R.drawable.axela),
+            Car("BMW X1", 80, 7, "Manual", R.drawable.bmw_x5),
+            Car("Honda Civic", 60, 5, "Automatic", R.drawable.civic),
+            Car("Chevrolet", 150, 7, "Automatic", R.drawable.trailblazer),
+            Car("Benz GLE", 200, 5, "Automatic", R.drawable.gle)
         )
 
         // Set Adapter

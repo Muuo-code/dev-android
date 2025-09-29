@@ -1,56 +1,77 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="12dp"
-    android:layout_margin="8dp"
-    android:background="@drawable/card_bg"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp"
+    android:backgroundTint="#1A1A2E"
+    android:padding="12dp">
 
-    <ImageView
-        android:id="@+id/ivCarImage"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/sample_car"
-        android:contentDescription="@string/car_image"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvCarName"
-        android:text="@string/car_name"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Car Image -->
+        <ImageView
+            android:id="@+id/ivCarImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/sample_car"
+            android:contentDescription="@string/car_image"/>
 
-    <TextView
-        android:id="@+id/tvCarPrice"
-        android:text="$50/day"
-        android:textColor="#B388EB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Car Name -->
+        <TextView
+            android:id="@+id/tvCarName"
+            android:text="@string/car_name"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvCarSeats"
-        android:text="@string/_5_seats"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvCarPrice"
+            android:text="$50/day"
+            android:textColor="#B388EB"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvCarType"
-        android:text="@string/automatic"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Seats -->
+        <TextView
+            android:id="@+id/tvCarSeats"
+            android:text="@string/_5_seats"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btnSelect"
-        android:text="@string/select"
-        android:backgroundTint="#7B2CBF"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Transmission -->
+        <TextView
+            android:id="@+id/tvCarType"
+            android:text="@string/automatic"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <!-- Select Button -->
+        <Button
+            android:id="@+id/btnSelect"
+            android:text="@string/select"
+            android:backgroundTint="#7B2CBF"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -46,68 +46,153 @@
             android:textColor="#7B2CBF"
             android:layout_marginBottom="12dp" />
 
-        <!-- First row of vehicles -->
-        <LinearLayout
+        <ViewFlipper
+            android:id="@+id/viewFlipperVehicles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="12dp">
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="75dp"
-                android:src="@drawable/axela"
-                android:scaleType="centerCrop"
-                android:background="#1A1A2E"
-                android:padding="6dp"
-                android:layout_marginEnd="8dp" />
+            <!-- First view (2 rows: 3 + 2 vehicles) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="75dp"
-                android:src="@drawable/cayenne"
-                android:scaleType="centerCrop"
-                android:background="#1A1A2E"
-                android:padding="6dp"
-                android:layout_marginEnd="8dp" />
+                <!-- First row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp">
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="75dp"
-                android:src="@drawable/sample_car"
-                android:scaleType="centerCrop"
-                android:background="#1A1A2E"
-                android:padding="6dp" />
-        </LinearLayout>
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/axela"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp"
+                        android:layout_marginEnd="8dp" />
 
-        <!-- Second row of vehicles -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="20dp">
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/cayenne"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp"
+                        android:layout_marginEnd="8dp" />
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="75dp"
-                android:src="@drawable/gle"
-                android:scaleType="centerCrop"
-                android:background="#1A1A2E"
-                android:padding="6dp"
-                android:layout_marginEnd="8dp" />
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/sample_car"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp" />
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="75dp"
-                android:src="@drawable/civic"
-                android:scaleType="centerCrop"
-                android:background="#1A1A2E"
-                android:padding="6dp"
-                android:layout_marginEnd="8dp" />
+                <!-- Second row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp">
 
-        </LinearLayout>
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/gle"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/civic"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Second view (another 2 rows: 3 + 2 vehicles again) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- First row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/cayenne"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/axela"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/gle"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp" />
+                </LinearLayout>
+
+                <!-- Second row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/sample_car"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/bmw_x5"
+                        android:scaleType="centerCrop"
+                        android:background="#1A1A2E"
+                        android:padding="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ViewFlipper>
+
 
 
         <!-- Why SwiftRide -->
