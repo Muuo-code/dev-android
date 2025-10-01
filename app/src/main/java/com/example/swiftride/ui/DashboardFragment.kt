@@ -1,10 +1,14 @@
 package com.example.swiftride.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.swiftride.R
 import com.example.swiftride.adapter.BookingAdapter
 import com.example.swiftride.databinding.FragmentDashboardBinding
+import com.example.swiftride.ui.auth.RegisterActivity
 import com.example.swiftride.viewmodel.SharedViewModel
 
 class DashboardFragment : Fragment() {
@@ -79,5 +84,34 @@ class DashboardFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+}
+
+class WelcomeActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_welcome)
+
+        val btnGetStarted = findViewById<Button>(R.id.btnGetStarted)
+        val loginText = findViewById<TextView>(R.id.loginText)
+        val registerText = findViewById<TextView>(R.id.registerText)
+
+        btnGetStarted.setOnClickListener {
+            Toast.makeText(this, "Get Started clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        loginText.setOnClickListener {
+            Toast.makeText(this, "Login clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        registerText.setOnClickListener {
+            Toast.makeText(this, "Register clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
