@@ -1,8 +1,12 @@
-package com.example.swiftride.com.example.swiftride.data
+package com.example.swiftride.data
+
+import androidx.lifecycle.LiveData
+import com.example.swiftride.data.dao.CarDao
+import com.example.swiftride.data.model.CarEntity
 
 class CarRepository(private val carDao: CarDao) {
 
-    suspend fun getAllCars(): List<CarEntity> = carDao.getAllCars()
+    fun getAllCars(): LiveData<List<CarEntity>> = carDao.getAllCars()
 
     suspend fun addCar(car: CarEntity) = carDao.insertCar(car)
 

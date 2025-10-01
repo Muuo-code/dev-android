@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "728017148395",
+    "project_id": "swiftride-1bae9",
+    "storage_bucket": "swiftride-1bae9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728017148395:android:9c26d357f71a6ca67e61ae",
+        "android_client_info": {
+          "package_name": "com.example.swiftride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728017148395-gog5lhv97o5tcbmmda7qo47bfl67tfn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYvJn1JYbcn1wfbPg_2V0acKVrKM82nUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728017148395-gog5lhv97o5tcbmmda7qo47bfl67tfn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

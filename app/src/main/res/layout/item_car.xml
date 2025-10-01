@@ -1,77 +1,85 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    card_view:cardCornerRadius="12dp"
-    card_view:cardElevation="6dp"
-    android:backgroundTint="#1A1A2E"
-    android:padding="12dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <data>
+        <variable
+            name="car"
+            type="com.example.swiftride.data.model.CarEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:backgroundTint="#1A1A2E"
+        android:padding="12dp">
 
-        <!-- Car Image -->
-        <ImageView
-            android:id="@+id/ivCarImage"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:src="@drawable/sample_car"
-            android:contentDescription="@string/car_image"/>
+            android:layout_height="wrap_content">
 
-        <!-- Car Name -->
-        <TextView
-            android:id="@+id/tvCarName"
-            android:text="@string/car_name"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/ivCarImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:imageResource="@{car.imageResId}"
+                tools:srcCompat="@drawable/sample_car" 
+                android:contentDescription="@string/car_image"/>
 
-        <!-- Price -->
-        <TextView
-            android:id="@+id/tvCarPrice"
-            android:text="$50/day"
-            android:textColor="#B388EB"
-            android:textSize="14sp"
-            android:layout_marginTop="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvCarName"
+                android:text="@{car.brand + ` ` + car.model}"
+                tools:text="Car Name"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-        <!-- Seats -->
-        <TextView
-            android:id="@+id/tvCarSeats"
-            android:text="@string/_5_seats"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvCarPrice"
+                android:text='@{String.format("$%.2f/day", car.pricePerDay)}'
+                tools:text="$50/day"
+                android:textColor="#B388EB"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-        <!-- Transmission -->
-        <TextView
-            android:id="@+id/tvCarType"
-            android:text="@string/automatic"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvCarSeats"
+                android:text='@{String.valueOf(car.seats) + " Seats"}'
+                tools:text="5 Seats"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-        <!-- Select Button -->
-        <Button
-            android:id="@+id/btnSelect"
-            android:text="@string/select"
-            android:backgroundTint="#7B2CBF"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:layout_marginTop="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"/>
+            <TextView
+                android:id="@+id/tvCarType"
+                android:text="@{car.transmission}"
+                tools:text="Automatic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/btnSelect"
+                android:text="@string/select"
+                android:backgroundTint="#7B2CBF"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

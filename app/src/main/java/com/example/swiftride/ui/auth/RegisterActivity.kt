@@ -1,4 +1,4 @@
-package com.example.swiftride
+package com.example.swiftride.ui.auth
 
 import android.content.Intent
 import android.content.Context
@@ -8,6 +8,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.swiftride.ui.LoginActivity
+import com.example.swiftride.ui.MainActivity
+import com.example.swiftride.R
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.swiftride.com.example.swiftride.data
+package com.example.swiftride.data.model
 
 import androidx.room.Entity
 import androidx.room.ForeignKey

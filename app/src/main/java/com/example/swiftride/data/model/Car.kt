@@ -1,4 +1,4 @@
-package com.example.swiftride
+package com.example.swiftride.data.model
 
 data class Car(
     val name: String,

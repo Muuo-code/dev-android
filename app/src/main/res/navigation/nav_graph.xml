@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.swiftride.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminFragment"
+            app:destination="@id/adminFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.swiftride.ui.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_bookings"
+        android:name="com.example.swiftride.BookingFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/nav_cars"
+        android:name="com.example.swiftride.ui.CarListFragment"
+        android:label="@string/cars"
+        tools:layout="@layout/fragment_car_list" />
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.swiftride.ui.DashboardFragment"
+        android:label="@string/reservations"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.swiftride.ui.AdminFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin" />
+
+</navigation>

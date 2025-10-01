@@ -1,22 +1,25 @@
-// AppDatabase.kt
-package com.example.swiftride.com.example.swiftride.data // Assuming this is your data package
+package com.example.swiftride.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-// Remove 'com.example.swiftride.Car' if CarEntity is used everywhere
-// import com.example.swiftride.Car // This seems to be an old or incorrect entity reference
+import com.example.swiftride.data.dao.BookingDao
+import com.example.swiftride.data.dao.CarDao
+import com.example.swiftride.data.dao.UserDao
+import com.example.swiftride.data.model.BookingEntity
+import com.example.swiftride.data.model.CarEntity
+import com.example.swiftride.data.model.UserEntity
 
 @Database(
-    entities = [CarEntity::class, UserEntity::class, BookingEntity::class], // Added UserEntity and BookingEntity
-    version = 2, // Incremented version
+    entities = [CarEntity::class, UserEntity::class, BookingEntity::class],
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun carDao(): CarDao
-    abstract fun userDao(): UserDao       // Added UserDao
-    abstract fun bookingDao(): BookingDao // Added BookingDao
+    abstract fun userDao(): UserDao
+    abstract fun bookingDao(): BookingDao
 
     companion object {
         @Volatile
@@ -27,9 +30,9 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "car_database" // You might want to rename this if it's no longer just for cars
+                    "swift_ride_database"
                 )
-                .fallbackToDestructiveMigration() // Added for schema changes during development
+                .fallbackToDestructiveMigration()
                 .build()
                 INSTANCE = instance
                 instance

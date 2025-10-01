@@ -66,6 +66,13 @@
     <string name="return_location">return_location</string>
     <string name="pick_up_location">pick_up_location</string>
 
+    <string name="booking_id_format">Booking ID: %d</string>
+    <string name="user_id_format">User ID: %s</string>
+    <string name="car_id_format">Car ID: %d</string>
+    <string name="booking_dates_format">Dates: %s to %s</string>
+    <string name="total_price_format">Total Price: $%.2f</string>
+    <string name="booking_status_format">Status: %s</string>
+
     <string-array name="cities_array">
         <item>Nairobi</item>
         <item>Mombasa</item>

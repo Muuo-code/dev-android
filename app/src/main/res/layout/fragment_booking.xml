@@ -1,212 +1,123 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#0A0A23">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- App Title -->
-    <TextView
-        android:id="@+id/tvAppTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/swiftride"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#9B5CFF"
-        android:gravity="center"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="28dp"/>
-
-    <!-- Pickup Location Label -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pick Up Location"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:layout_marginBottom="6dp"/>
-
-    <!-- Pickup City with Icon -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/themed_input_bg"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_location"
-            android:tint="#9B5CFF"
-            android:layout_marginEnd="10dp"/>
-
-        <Spinner
-            android:id="@+id/spinnerPickup"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:spinnerMode="dropdown"/>
-    </LinearLayout>
-
-    <!-- Return Location Label -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Return Location"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:layout_marginBottom="6dp"/>
-
-    <!-- Return City with Icon -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/themed_input_bg"
-        android:padding="10dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_location"
-            android:tint="#9B5CFF"
-            android:layout_marginEnd="10dp"/>
-
-        <Spinner
-            android:id="@+id/spinnerReturn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:spinnerMode="dropdown"/>
-    </LinearLayout>
-
-    <!-- Dates Row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginBottom="20dp">
-
-        <!-- Pickup Date -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="@drawable/themed_input_bg"
-            android:padding="10dp"
-            android:layout_marginEnd="8dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_calendar"
-                android:tint="#9B5CFF"
-                android:layout_marginEnd="6dp"/>
-
-            <TextView
-                android:id="@+id/tvPickupDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pick_up_date"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-        <!-- Return Date -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="@drawable/themed_input_bg"
-            android:padding="10dp"
-            android:layout_marginStart="8dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_calendar"
-                android:tint="#9B5CFF"
-                android:layout_marginEnd="6dp"/>
-
-            <TextView
-                android:id="@+id/tvReturnDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/return_date"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Selected Vehicle -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@drawable/themed_input_bg"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_car"
-            android:tint="#9B5CFF"
-            android:layout_marginEnd="6dp"/>
+        android:layout_height="match_parent"
+        tools:context=".ui.BookingFragment">
 
         <TextView
-            android:id="@+id/tvSelectedVehicle"
+            android:id="@+id/textViewSelectedCarBrandModel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Car Brand - Model" />
+
+        <TextView
+            android:id="@+id/textViewSelectedCarPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewSelectedCarBrandModel"
+            tools:text="Price per day: $100.00" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPickupDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/textFieldReturnDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectedCarPrice">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPickupDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Pickup Date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldReturnDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textFieldPickupDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectedCarPrice">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextReturnDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Return Date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonShowDatePickerPickup"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            app:layout_constraintBottom_toBottomOf="@id/textFieldPickupDate"
+            app:layout_constraintEnd_toEndOf="@id/textFieldPickupDate"
+            app:layout_constraintTop_toTopOf="@id/textFieldPickupDate" />
+
+        <Button
+            android:id="@+id/buttonShowDatePickerReturn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            app:layout_constraintBottom_toBottomOf="@id/textFieldReturnDate"
+            app:layout_constraintEnd_toEndOf="@id/textFieldReturnDate"
+            app:layout_constraintTop_toTopOf="@id/textFieldReturnDate" />
+
+        <TextView
+            android:id="@+id/textViewTotalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/select_vehicle"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"/>
-    </LinearLayout>
+            android:layout_marginTop="24dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textFieldPickupDate"
+            tools:text="$500.00" />
 
-    <!-- Buttons Row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginBottom="20dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSelectVehicle"
+        <Button
+            android:id="@+id/buttonConfirmBooking"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/show_vehicles"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            app:cornerRadius="20dp"
-            app:backgroundTint="#7B2CBF"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Confirm Booking"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnConfirm"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/confirm_booking"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            app:cornerRadius="20dp"
-            app:backgroundTint="#9B5CFF"
-            android:layout_marginStart="8dp"/>
-    </LinearLayout>
-
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
