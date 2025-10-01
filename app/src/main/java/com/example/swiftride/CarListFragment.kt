@@ -14,6 +14,7 @@ class CarListFragment : Fragment() {
 
     private lateinit var sharedViewModel: SharedViewModel
     private lateinit var recyclerView: RecyclerView
+    private lateinit var carAdapter: CarAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,29 +27,23 @@ class CarListFragment : Fragment() {
 
         // Setup RecyclerView
         recyclerView = view.findViewById(R.id.recyclerCars)
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2) // 2 columns
+        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
-        // Car list with local drawables
-        val carList = listOf(
-            Car("Axela", 50, 5, "Automatic", R.drawable.axela),
-            Car("BMW X1", 80, 7, "Manual", R.drawable.bmw_x5),
-            Car("Honda Civic", 60, 5, "Automatic", R.drawable.civic),
-            Car("Chevrolet", 150, 7, "Automatic", R.drawable.trailblazer),
-            Car("Benz GLE", 200, 5, "Automatic", R.drawable.gle),
-            Car("Axela", 50, 5, "Automatic", R.drawable.axela),
-            Car("BMW X1", 80, 7, "Manual", R.drawable.bmw_x5),
-            Car("Honda Civic", 60, 5, "Automatic", R.drawable.civic),
-            Car("Chevrolet", 150, 7, "Automatic", R.drawable.trailblazer),
-            Car("Benz GLE", 200, 5, "Automatic", R.drawable.gle)
-        )
-
-        // Set Adapter
-        recyclerView.adapter = CarAdapter(carList) { car ->
+        // Setup Adapter with empty list initially
+        carAdapter = CarAdapter(emptyList()) { car ->
             sharedViewModel.selectCar(car)
-            Toast.makeText(requireContext(), "${car.name} selected", Toast.LENGTH_SHORT).show()
-            parentFragmentManager.popBackStack() // return to previous fragment
+            Toast.makeText(requireContext(), "${car.brand} ${car.model} selected", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.popBackStack()
+        }
+
+        recyclerView.adapter = carAdapter
+
+        // Observe DB changes
+        sharedViewModel.allCars.observe(viewLifecycleOwner) { cars ->
+            carAdapter.updateCars(cars)
         }
 
         return view
     }
 }
+
